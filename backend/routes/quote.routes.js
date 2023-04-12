@@ -18,3 +18,4 @@ router.route('/api/quotes/:quoteId')
 router.param('userId', userCtrl.userByID)
 router.param('quoteId', quoteCtrl.quoteByID)
 
+export default router

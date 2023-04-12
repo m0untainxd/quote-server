@@ -10,6 +10,7 @@ import config from './config.js';
 // routing
 import userRoutes from './routes/user.routes.js'
 import authRoutes from './routes/auth.routes.js'
+import quoteRoutes from './routes/quote.routes.js'
 
 // app setup
 var app = express();
@@ -31,6 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', userRoutes);
 app.use('/', authRoutes);
+app.use('/', quoteRoutes);
 
 // 404 not found page
 app.use(function(req, res, next) {
