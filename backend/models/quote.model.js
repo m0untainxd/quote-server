@@ -34,6 +34,10 @@ const QuoteSchema = new mongoose.Schema({
             required: "Cost of physical resource required"
         }
     }],
+    user: {
+        type: String,
+        required: "User email required"
+    },
     updated: Date,
     created: {
         type: Date,
