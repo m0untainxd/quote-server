@@ -3,6 +3,8 @@ import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+
 
 //config
 import config from './config.js';
@@ -28,6 +30,7 @@ mongoose.connection.on('connected', () => {
     console.log("MongoDB connected successfully!")
 });
 
+app.use(cors()) // temp
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', userRoutes);

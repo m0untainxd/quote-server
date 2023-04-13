@@ -14,19 +14,15 @@ const QuoteSchema = new mongoose.Schema({
                 type: String,
                 required: "Name of person required"
             },
-            cost: {
+            hours: {
                 type: mongoose.Types.Decimal128,
-                required: "Cost of person required"
+                required: "number of hours required"
             }
     }],
     resources: [{
         name: {
             type: String,
             required: "Name of physical resource required"
-        },
-        res_type: {
-            type: String,
-            required: "Type of cost for physical resource required"
         },
         number: Number,
         cost: {
@@ -44,3 +40,5 @@ const QuoteSchema = new mongoose.Schema({
         default: Date.now()
     }
 })
+
+export default QuoteSchema;
